@@ -4,7 +4,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 
-public class Homework implements Comparable<Homework>{
+public class Homework  implements Comparable<Homework>{
 	/**Descripción de la tarea**/
 	private String descripcion;
 	/**Date de la entrega**/
@@ -42,6 +42,11 @@ public class Homework implements Comparable<Homework>{
 
 	public int compareTo(Homework h){
 		return this.getFecha().compareTo(h.getFecha());
+	}
+
+	@Override
+	public String toString(){
+		return "Descripción:\n"+this.descripcion+"\n" + "Fecha de Entrega:\n" +fechaEntrega.toString();
 	}
 
 
