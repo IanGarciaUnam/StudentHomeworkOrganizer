@@ -31,6 +31,19 @@ public class Homework  implements Comparable<Homework>{
 		*/
 		this.descripcion=descripcion;	
 	}
+
+
+	public String getDescripcion(){
+		return this.descripcion;
+	}
+
+	public boolean equals(Object o){
+		if(o==null || o.getClass() != this.getClass())return false;
+		Homework h= (Homework)o;
+		return this.getDescripcion().equals(h.getDescripcion()) && this.getFecha().equals(h.getFecha());
+	}
+
+
 	/**
 	*Devuelve la fecha 
 	*@return Date
